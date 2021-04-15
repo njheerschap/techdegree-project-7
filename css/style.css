@@ -442,6 +442,7 @@ canvas {
   display: inline;
   margin-right: 10px;
   align-self: center;
+  fill: white;
 }
 
 .profile {
@@ -475,6 +476,13 @@ canvas {
 
 a svg {
   align-self: center;
+}
+
+.home,
+.charts,
+.users,
+.settings {
+  fill: white;
 }
 
 /*
@@ -1300,6 +1308,12 @@ a svg {
   margin: 5px;
   font-size: 2rem;
   font-weight: 200;
+}
+
+.facebook,
+.instagram,
+.twitter {
+  fill: white;
 }
 
 /* ======== New Members ======== */
