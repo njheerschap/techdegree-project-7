@@ -135,63 +135,63 @@
             <section class="new-members">
                 <h3>New Members</h3>
                 <div class="member-container">
-                    <img src="images/member-1.jpg" alt="Member profile image">
+                    <img src="images/member-1.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-info">
                         <p>Victoria Chambers</p>
                         <a href="#">victoria.chambers80@example.com</a>
                     </div>
-                    <p>10/15/20</p>
+                    <p class="date">10/15/20</p>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-2.jpg" alt="Member profile image">
+                    <img src="images/member-2.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-info">
                         <p>Dale Byrd</p>
                         <a href="#">dale.byrd52@example.com</a>
                     </div>
-                    <p>10/15/20</p>
+                    <p class="date">10/15/20</p>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-3.jpg" alt="Member profile image">
+                    <img src="images/member-3.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-info">
                         <p>Dawn Wood</p>
                         <a href="#">dawn.wood16@example.com</a>
                     </div>
-                    <p>10/15/20</p>
+                    <p class="date">10/15/20</p>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-4.jpg" alt="Member profile image">
+                    <img src="images/member-4.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-info">
                         <p>Dan Oliver</p>
                         <a href="#">dan.oliver82@example.com</a>
                     </div>
-                    <p>10/15/20</p>
+                    <p class="date">10/15/20</p>
                 </div>
             </section>
             <section class="recent-activity">
                 <h3>Recent Activity</h3>
                 <div class="member-container">
-                    <img src="images/member-1.jpg" alt="Member profile image">
+                    <img src="images/member-1.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-activity">
                         <p>Victoria Chambers commented on WebApp's SEO Tips</p>
                         <p>4 hours ago</p>
                     </div>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-2.jpg" alt="Member profile image">
+                    <img src="images/member-2.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-activity">
                         <p>Dale Byrd liked the post Facebook's Changes for 2021</p>
                         <p>5 hous ago</p>
                     </div>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-3.jpg" alt="Member profile image">
+                    <img src="images/member-3.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-activity">
                         <p>Dawn Wood commented on Facebook's Changes for 2021</p>
                         <p>5 hours ago</p>
                     </div>
                 </div>
                 <div class="member-container">
-                    <img src="images/member-4.jpg" alt="Member profile image">
+                    <img src="images/member-4.jpg" alt="Member profile image" class="profile-image">
                     <div class="member-activity">
                         <p>Dan Oliver posted WebApp's SEO Tips</p>
                         <p>1 day ago</p>
@@ -202,36 +202,39 @@
             <section class="messages">
                 <h3>Message User</h3>
                 <form class="widget-container">
-                    <input type="text" placeholder="search for user" class="form-input" id="userField">
+                    <input type="text" placeholder="Search for user" class="form-input" id="userField">
                     <textarea placeholder="Message for user" class="form-input" id="messageField"></textarea>
                     <button class="send-button" id="send">Send</button>
                 </form>
             </section>   
             <section class="settings">
                 <h3>Settings</h3>
-                <label class="switch-light switch-material" onclick="">
-                    <input type="checkbox">              
-                    <strong>
-                    Send Email Notifications
-                    </strong>
-                    <span>
-                    <span>Off</span>
-                    <span>On</span>
-                    <a></a>
-                    </span>
-                </label>
-                <label class="switch-light switch-material" onclick="">
-                    <input type="checkbox">              
-                    <strong>
-                    Set Profile to Public
-                    </strong>
-                    <span>
-                    <span>Off</span>
-                    <span>On</span>
-                    <a></a>
-                    </span>
-                </label>
-                <select class="form-input" id="timezone">
+
+                <div class="toggles">
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox">
+                        <div class="setting-toggle">
+                            <strong>Send Email Notifications</strong>
+                        </div>
+                        <span class="toggle-switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox">
+                        <div class="setting-toggle">
+                            <strong>Set Profile to Public</strong>
+                        </div>              
+                        <span class="toggle-switch">
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                </div>
+                    <select class="form-input" id="timezone">
                     <option disabled selected>Select Your Time Zone</option>
                     <option>Eastern</option>
                     <option>Central</option>
@@ -239,8 +242,8 @@
                     <option>Pacific</option>
                 </select>
                 <div class="settings-buttons">
-                    <button class="button-primary" id="save">Save</button>
-                    <button class="button-secondary" id="cancel">Cancel</button>
+                    <button class="button-primary save-button" id="save">Save</button>
+                    <button class="button-secondary cancel-button" id="cancel">Cancel</button>
                 </div>
             </section>
         </main>

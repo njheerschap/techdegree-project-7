@@ -119,14 +119,14 @@
     padding: 10px;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    background-color: #f2f2f2 ;
+    background-color: $color-input-background;
 }
 
 .social-icon {
-    display: flex;
+    display: block;
     justify-content: center;
-    flex: 0 0 25%;
-    height: 67px;
+    width: 65px;
+    height: 65px;
     margin-left: 10px;
     margin-right: 15px;
     border-radius: 50%;
@@ -134,7 +134,9 @@
 }
 
 .social-icon svg {
-    align-self: center;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(50%);
 }
 
 .social-site {
@@ -147,4 +149,153 @@
     margin: 5px;
     font-size: 2rem;
     font-weight: 200;
+}
+
+/* ======== New Members ======== */ 
+
+.new-members h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.member-container {
+    margin-top: 15px;
+}
+
+.profile-image {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.member-info,
+.date, 
+.member-activity {
+    font-size: .85rem;
+    text-align: center;
+}
+.member-info p {
+    margin-bottom: 0;
+}
+
+.date {
+    margin: 5px 20px 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* ======== Recent Activity ======== */
+
+.recent-activity h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.member-activity p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.member-activity{
+    margin: 5px 20px 0px 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+/* ======== Message User ========*/
+
+.messages {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.messages h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.form-input, 
+.send-button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+input {
+    height: 50px;
+    background-color: $color-input-background;
+}
+
+textarea {
+    height: 150px;
+    background-color: $color-input-background;
+}
+
+.send-button {
+    height: 50px;
+    background-color: $color-primary;
+    color: white;
+}
+
+/* ======== Settings ======== */
+
+.settings h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.switch-light {
+    margin: 25px 10px;
+}
+
+label span {
+    float: right;
+}
+
+.setting-toggle {
+    display: inline-block;
+    font-size: .8rem;
+    padding: 10px 0;
+}
+
+.toggle-switch {
+    width: 30px;
+}
+
+.toggles{
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+select {
+    height: 50px;
+    padding: 5px;
+    background-color: $color-input-background;
+}
+
+.settings-buttons {
+    display: flex;
+}
+
+.save-button,
+.cancel-button {
+    flex-basis: 50%;
+    margin: 20px 10px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid lightgrey;
+}
+
+.save-button {
+    background-color: $color-primary;
+}
+
+.cancel-button {
+    background-color: darkgrey;
 }

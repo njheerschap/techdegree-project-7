@@ -427,7 +427,7 @@ canvas {
   align-self: center;
   height: 40px;
   width: 40px;
-  border-right: 1px solid white;
+  border-right: 1px solid lightgrey;
 }
 
 .main-header h1 {
@@ -447,9 +447,9 @@ canvas {
 .profile {
   margin-right: 5px;
   margin-left: 10px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
   align-self: center;
 }
 
@@ -857,7 +857,7 @@ a svg {
 
   .switch-ios.switch-light > span {
     display: block;
-    width: 100%;
+    width: 25vw;
     height: 2em;
     background-color: #D8D9DB;
     border-radius: 1.75em;
@@ -886,13 +886,13 @@ a svg {
 
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
-    border-color: #4BD865;
+    border-color: #8674b5;
     margin-left: -2em;
   }
 
   .switch-ios.switch-light input:checked ~ span {
-    border-color: #4BD865;
-    box-shadow: inset 0 0 0 30px #4BD865;
+    border-color: #8674b5;
+    box-shadow: inset 0 0 0 30px #8674b5;
   }
 
   .switch-ios.switch-light input:checked ~ span span:first-of-type {
@@ -911,7 +911,7 @@ a svg {
   }
 
   .switch-ios.switch-toggle a {
-    background-color: #4BD865;
+    background-color: #8674b5;
     border: 0.125em solid #D8D9DB;
     border-radius: 1.75em;
     transition: all 0.12s ease-out;
@@ -1274,10 +1274,10 @@ a svg {
 }
 
 .social-icon {
-  display: flex;
+  display: block;
   justify-content: center;
-  flex: 0 0 25%;
-  height: 67px;
+  width: 65px;
+  height: 65px;
   margin-left: 10px;
   margin-right: 15px;
   border-radius: 50%;
@@ -1285,7 +1285,9 @@ a svg {
 }
 
 .social-icon svg {
-  align-self: center;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(50%);
 }
 
 .social-site {
@@ -1298,6 +1300,151 @@ a svg {
   margin: 5px;
   font-size: 2rem;
   font-weight: 200;
+}
+
+/* ======== New Members ======== */
+.new-members h3 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.member-container {
+  margin-top: 15px;
+}
+
+.profile-image {
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.member-info,
+.date,
+.member-activity {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.member-info p {
+  margin-bottom: 0;
+}
+
+.date {
+  margin: 5px 20px 0 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* ======== Recent Activity ======== */
+.recent-activity h3 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.member-activity p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.member-activity {
+  margin: 5px 20px 0px 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* ======== Message User ========*/
+.messages {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.messages h3 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.form-input,
+.send-button {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 15px auto;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+input {
+  height: 50px;
+  background-color: #f2f2f2;
+}
+
+textarea {
+  height: 150px;
+  background-color: #f2f2f2;
+}
+
+.send-button {
+  height: 50px;
+  background-color: #8674b5;
+  color: white;
+}
+
+/* ======== Settings ======== */
+.settings h3 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.switch-light {
+  margin: 25px 10px;
+}
+
+label span {
+  float: right;
+}
+
+.setting-toggle {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 10px 0;
+}
+
+.toggle-switch {
+  width: 30px;
+}
+
+.toggles {
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+select {
+  height: 50px;
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+
+.settings-buttons {
+  display: flex;
+}
+
+.save-button,
+.cancel-button {
+  flex-basis: 50%;
+  margin: 20px 10px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid lightgrey;
+}
+
+.save-button {
+  background-color: #8674b5;
+}
+
+.cancel-button {
+  background-color: darkgrey;
 }
 
 /*# sourceMappingURL=style.css.map */
