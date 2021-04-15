@@ -1,0 +1,16 @@
+.main-nav {
+    display: flex;
+    height: 60px;
+    padding: 0 30px;
+    background-color: $color-secondary;
+}
+
+.main-nav a {
+    display: flex;
+    justify-content: center;
+    flex-basis: 25%;
+}
+
+a svg {
+    align-self: center;
+}

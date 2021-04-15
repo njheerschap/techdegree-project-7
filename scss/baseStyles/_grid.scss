@@ -1,0 +1,75 @@
+
+/* ======== Grid layout ======== */
+
+/* Main grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
+
+    @include for-md-screen {
+        grid-template-columns: 55px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header header"
+        "nav main";
+    }
+}
+
+.main-header {
+    grid-area: header;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.main-content {
+    grid-area: main;
+    display: grid;
+}
+
+/* Widget Grid */
+
+@include for-md-screen {
+    .grid-container 
+    .main-content {
+        grid-template-columns: 50%;
+        grid-template-rows: auto;
+    }
+
+    .widget-header,
+    .traffic,
+    .social-container {
+        grid-column: 1 / span 2;
+    }
+
+    .daily-traffic,
+    .new-members,
+    .messages {
+        grid-column: 1/ span 1;
+    }
+
+    .mobile-users,
+    .recent-activity,
+    .settings {
+        grid-column: 2 /span 1;;
+    }
+
+    .social {
+        display: inline-flex;
+    }
+
+    .container-full {
+        width: 90vh;
+    }
+
+    .container-half {
+        width: 45vh;
+    }
+
+}

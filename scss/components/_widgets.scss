@@ -1,0 +1,150 @@
+
+/* ======== Widget Containers ======== */
+
+.container-full,
+.container-half {
+    width: 95vh;
+}
+
+
+/* ======== Widget Header ======== */
+
+.widget-header {
+    display: flex;
+    height: 60px;
+}
+
+.dash-head {
+    align-self: center;
+    padding-left: 10px;
+    flex-basis: 33%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main-header-search {
+    flex-basis: 66%;
+    align-self: flex-end;
+}
+
+.main-header-search input {
+    width: 100%;
+    height: 60px;
+    padding-right: 0;
+    padding-left: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* ======== Traffic Widget ======== */
+
+/* Traffic Chart Head */
+
+.traffic {
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.traffic-chart-head h3 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.traffic-chart-head ul {
+    padding: 0 10px
+}
+
+.traffic-chart-head li {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
+    font-size: .95rem;
+}
+
+
+/* Traffic Chart */
+
+.placeholder {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ======== Daily Traffic Widget ======== */
+
+.daily-traffic {
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.daily-traffic h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+/* ======== Mobile Users ======== */ 
+
+.mobile-users {
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.mobile-users h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+/* ======== Social Stats ======== */
+
+.social-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.social-container h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.social {
+    display: flex;
+    flex-basis: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: #f2f2f2 ;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 25%;
+    height: 67px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: $color-primary;
+}
+
+.social-icon svg {
+    align-self: center;
+}
+
+.social-site {
+    font-size: 1.2rem;
+    margin: 5px;
+    color: $color-secondary;
+}
+
+.social-number {
+    margin: 5px;
+    font-size: 2rem;
+    font-weight: 200;
+}
