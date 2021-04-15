@@ -12,12 +12,19 @@
     "main";
 
     @include for-md-screen {
-        grid-template-columns: 55px 1fr;
+        grid-template-columns: 65px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
         "header header"
+        "nav main"
         "nav main";
     }
+}
+
+.container-full,
+.container-half {
+    margin: 0 auto;
+    width: 95vw;
 }
 
 .main-header {
@@ -35,41 +42,67 @@
 
 /* Widget Grid */
 
-@include for-md-screen {
+
     .grid-container 
     .main-content {
+        @include for-md-screen{
         grid-template-columns: 50%;
         grid-template-rows: auto;
+        }
     }
 
     .widget-header,
     .traffic,
     .social-container {
-        grid-column: 1 / span 2;
+        @include for-md-screen{
+            grid-column: 1 / span 2;
+        }
     }
 
-    .daily-traffic,
+    .daily-traffic {
+        @include for-md-screen {
+            grid-column: 1 / span 1;
+        }
+    }
     .new-members,
     .messages {
-        grid-column: 1/ span 1;
+        @include for-md-screen {
+            grid-column: 1 / span 2;
+        }
+        @include for-lg-screen {
+            grid-column: 1 / span 1;
+        }
     }
 
-    .mobile-users,
+    .mobile-users {
+        @include for-md-screen {
+            grid-column: 2 /span 1;;
+        }
+    }
     .recent-activity,
     .settings {
-        grid-column: 2 /span 1;;
+        @include for-md-screen {
+            grid-column: 1 / span 2;
+        }
+        @include for-lg-screen {
+            grid-column: 2 /span 1;;
+        }
     }
 
     .social {
-        display: inline-flex;
+        @include for-md-screen {
+            display: inline-flex;
+        }
     }
 
     .container-full {
-        width: 90vh;
+        @include for-md-screen {
+            width: 90vw;
+        }
     }
 
     .container-half {
-        width: 45vh;
+        @include for-md-screen {
+            width: 45vw;
+        }
     }
-
-}

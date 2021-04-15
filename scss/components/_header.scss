@@ -20,6 +20,9 @@
     flex-basis: 50%;
     font-size: 1.25rem;
     font-weight: 300;
+    @include for-lg-screen {
+        flex: 0 0 80%;
+    }
 }
 
 .bell {

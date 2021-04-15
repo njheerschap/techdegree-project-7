@@ -349,6 +349,17 @@ canvas {
   display: none;
 }
 
+.placeholder {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .placeholder {
+    width: 95%;
+    height: auto;
+  }
+}
+
 /* ======== Grid layout ======== */
 /* Main grid */
 .grid-container {
@@ -359,10 +370,16 @@ canvas {
 }
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 65px 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "header header" "nav main";
+    grid-template-areas: "header header" "nav main" "nav main";
   }
+}
+
+.container-full,
+.container-half {
+  margin: 0 auto;
+  width: 95vw;
 }
 
 .main-header {
@@ -384,37 +401,72 @@ canvas {
     grid-template-columns: 50%;
     grid-template-rows: auto;
   }
+}
 
+@media (min-width: 768px) {
   .widget-header,
 .traffic,
 .social-container {
     grid-column: 1/span 2;
   }
+}
 
-  .daily-traffic,
-.new-members,
+@media (min-width: 768px) {
+  .daily-traffic {
+    grid-column: 1/span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .new-members,
+.messages {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .new-members,
 .messages {
     grid-column: 1/span 1;
   }
+}
 
-  .mobile-users,
-.recent-activity,
+@media (min-width: 768px) {
+  .mobile-users {
+    grid-column: 2/span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .recent-activity,
+.settings {
+    grid-column: 1/span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .recent-activity,
 .settings {
     grid-column: 2/span 1;
   }
+}
 
+@media (min-width: 768px) {
   .social {
     display: inline-flex;
   }
+}
 
+@media (min-width: 768px) {
   .container-full {
-    width: 90vh;
-  }
-
-  .container-half {
-    width: 45vh;
+    width: 90vw;
   }
 }
+
+@media (min-width: 768px) {
+  .container-half {
+    width: 45vw;
+  }
+}
+
 .main-header {
   height: 75px;
   display: flex;
@@ -436,6 +488,11 @@ canvas {
   flex-basis: 50%;
   font-size: 1.25rem;
   font-weight: 300;
+}
+@media (min-width: 1024px) {
+  .main-header h1 {
+    flex: 0 0 80%;
+  }
 }
 
 .bell {
@@ -467,11 +524,23 @@ canvas {
   padding: 0 30px;
   background-color: #625585;
 }
+@media (min-width: 768px) {
+  .main-nav {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+}
 
 .main-nav a {
   display: flex;
   justify-content: center;
   flex-basis: 25%;
+}
+@media (min-width: 768px) {
+  .main-nav a {
+    margin: 20px 0;
+  }
 }
 
 a svg {
@@ -1169,11 +1238,6 @@ a svg {
 }
 /*# sourceMappingURL=toggle-switch.css.map */
 /* ======== Widget Containers ======== */
-.container-full,
-.container-half {
-  width: 95vh;
-}
-
 /* ======== Widget Header ======== */
 .widget-header {
   display: flex;
@@ -1189,8 +1253,12 @@ a svg {
 }
 
 .main-header-search {
-  flex-basis: 66%;
-  align-self: flex-end;
+  flex-basis: 67%;
+}
+@media (min-width: 1024px) {
+  .main-header-search {
+    flex: 1 0 85%;
+  }
 }
 
 .main-header-search input {
@@ -1211,11 +1279,22 @@ a svg {
   border-bottom: 1px solid lightgrey;
 }
 
+@media (min-width: 768px) {
+  .traffic-chart-head {
+    display: flex;
+  }
+}
+
 .traffic-chart-head h3 {
   margin-left: 10px;
   margin-bottom: 10px;
   margin-top: 20px;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .traffic-chart-head h3 {
+    flex-basis: 55%;
+  }
 }
 
 .traffic-chart-head ul {
@@ -1265,10 +1344,20 @@ a svg {
   padding-bottom: 15px;
   border-bottom: 1px solid lightgrey;
 }
+@media (min-width: 768px) {
+  .social-container {
+    justify-content: space-around;
+  }
+}
 
 .social-container h3 {
   margin-left: 10px;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .social-container h3 {
+    width: 100%;
+  }
 }
 
 .social {
@@ -1279,6 +1368,12 @@ a svg {
   border: 1px solid lightgrey;
   border-radius: 5px;
   background-color: #f2f2f2;
+}
+@media (min-width: 768px) {
+  .social {
+    flex-basis: 30%;
+    margin: 5px;
+  }
 }
 
 .social-icon {
@@ -1317,6 +1412,20 @@ a svg {
 }
 
 /* ======== New Members ======== */
+.member-container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.member-container:nth-child(5) {
+  border-bottom: none;
+}
+
+.new-members,
+.recent-activity {
+  border-bottom: 1px solid lightgrey;
+}
+
 .new-members h3 {
   margin-left: 10px;
   font-weight: 400;
@@ -1324,6 +1433,15 @@ a svg {
 
 .member-container {
   margin-top: 15px;
+  height: 150px;
+  border-bottom: 1px solid lightgrey;
+}
+@media (min-width: 768px) {
+  .member-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
 }
 
 .profile-image {
@@ -1333,12 +1451,31 @@ a svg {
   border-radius: 50%;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .profile-image {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
 
 .member-info,
 .date,
 .member-activity {
   font-size: 0.85rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .date {
+    flex-basis: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .member-info {
+    flex-basis: calc(90% - 75px);
+    text-align: left;
+  }
 }
 
 .member-info p {
@@ -1348,7 +1485,6 @@ a svg {
 .date {
   margin: 5px 20px 0 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid lightgrey;
 }
 
 /* ======== Recent Activity ======== */
@@ -1365,7 +1501,13 @@ a svg {
 .member-activity {
   margin: 5px 20px 0px 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
+}
+@media (min-width: 768px) {
+  .member-activity {
+    flex-basis: calc(100% - 75px);
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 /* ======== Message User ========*/
@@ -1413,6 +1555,11 @@ textarea {
 .switch-light {
   margin: 25px 10px;
 }
+@media (min-width: 1024px) {
+  .switch-light {
+    padding: 5.25px 0;
+  }
+}
 
 label span {
   float: right;
@@ -1459,6 +1606,13 @@ select {
 
 .cancel-button {
   background-color: darkgrey;
+}
+
+@media (min-width: 1024px) {
+  .recent-activity,
+.settings {
+    border-left: 1px solid lightgrey;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

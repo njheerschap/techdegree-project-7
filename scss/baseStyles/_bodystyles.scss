@@ -9,3 +9,12 @@ canvas {
     display: none;
 }
 
+.placeholder {
+    display: block;
+    margin: 0 auto;
+    @include for-md-screen{
+        width: 95%;
+        height: auto;
+    }
+}
+

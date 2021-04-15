@@ -1,10 +1,7 @@
 
 /* ======== Widget Containers ======== */
 
-.container-full,
-.container-half {
-    width: 95vh;
-}
+
 
 
 /* ======== Widget Header ======== */
@@ -23,8 +20,10 @@
 }
 
 .main-header-search {
-    flex-basis: 66%;
-    align-self: flex-end;
+    flex-basis: 67%;
+    @include for-lg-screen {
+        flex: 1 0 85%;
+    }
 }
 
 .main-header-search input {
@@ -47,11 +46,20 @@
     border-bottom: 1px solid lightgrey;
 }
 
+.traffic-chart-head {
+    @include for-md-screen {
+        display: flex;
+    }
+}
+
 .traffic-chart-head h3 {
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 20px;
     font-weight: 400;
+    @include for-md-screen {
+        flex-basis: 55%;
+    }
 }
 
 .traffic-chart-head ul {
@@ -105,11 +113,17 @@
     flex-wrap: wrap;
     padding-bottom: 15px;
     border-bottom: 1px solid lightgrey;
+    @include for-md-screen {
+        justify-content: space-around;
+    }
 }
 
 .social-container h3 {
     margin-left: 10px;
     font-weight: 400;
+    @include for-md-screen {
+        width: 100%;
+    }
 }
 
 .social {
@@ -120,6 +134,10 @@
     border: 1px solid lightgrey;
     border-radius: 5px;
     background-color: $color-input-background;
+    @include for-md-screen {
+        flex-basis: 30%;
+        margin: 5px;
+    }
 }
 
 .social-icon {
@@ -159,6 +177,20 @@
 
 /* ======== New Members ======== */ 
 
+.member-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.member-container:nth-child(5) {
+    border-bottom: none;
+}
+
+.new-members,
+.recent-activity {
+    border-bottom: 1px solid lightgrey;
+}
+
 .new-members h3 {
     margin-left: 10px;
     font-weight: 400;
@@ -166,6 +198,13 @@
 
 .member-container {
     margin-top: 15px;
+    height: 150px;
+    border-bottom: 1px solid lightgrey;
+    @include for-md-screen {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+    }
 }
 
 .profile-image {
@@ -174,6 +213,10 @@
     height: 75px;
     border-radius: 50%;
     margin: 0 auto;
+    @include for-md-screen {
+        margin-left: 0;
+        margin-right: 10px;
+    }
 }
 
 .member-info,
@@ -182,6 +225,20 @@
     font-size: .85rem;
     text-align: center;
 }
+
+.date {
+    @include for-md-screen {
+        flex-basis: 10%;
+    }
+}
+
+.member-info {
+    @include for-md-screen {
+        flex-basis: calc(90% - 75px);
+        text-align: left;
+    }
+}
+
 .member-info p {
     margin-bottom: 0;
 }
@@ -189,7 +246,6 @@
 .date {
     margin: 5px 20px 0 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid lightgrey;
 }
 
 /* ======== Recent Activity ======== */
@@ -207,8 +263,11 @@
 .member-activity{
     margin: 5px 20px 0px 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid lightgrey;
-
+    @include for-md-screen {
+        flex-basis: calc(100% - 75px);
+        margin-left: 0;
+        text-align: left;
+    }
 }
 
 /* ======== Message User ========*/
@@ -257,7 +316,11 @@ textarea {
 
 .switch-light {
     margin: 25px 10px;
+    @include for-lg-screen {
+        padding: 5.25px 0;
+    }
 }
+
 
 label span {
     float: right;
@@ -284,6 +347,7 @@ select {
     background-color: $color-input-background;
 }
 
+
 .settings-buttons {
     display: flex;
 }
@@ -304,4 +368,11 @@ select {
 
 .cancel-button {
     background-color: darkgrey;
+}
+
+.recent-activity,
+.settings {
+    @include for-lg-screen {
+        border-left: 1px solid lightgrey;
+    }
 }
