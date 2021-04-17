@@ -376,3 +376,16 @@ select {
         border-left: 1px solid lightgrey;
     }
 }
+
+.switch-ios.switch-light > span{
+    width: 25vw;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+    border-color: $color-primary;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+    background-color: $color-primary;
+    box-shadow: inset 0 0 30px $color-primary;
+}
