@@ -139,6 +139,17 @@ const user = document.querySelector('#userField');
 const message = document.querySelector('#messageField');
 const send = document.querySelector('#send');
 
+//Search Variables
+
+const userP = document.querySelectorAll('.user');
+const userResults = document.querySelector('#results')
+const userToMessage = []
+const test = ['victoria chambers']
+for (let i = 0; i < userP.length; i++) {
+    let addUser = userP[i].textContent.toLowerCase();
+    userToMessage.push (addUser)
+}
+
 notifications.innerHTML = `
 <div>
     <ul>
@@ -219,3 +230,35 @@ function createChart(chartElement, chartType, chartData, chartOptions ) {
 
 createChart(dailyCanvas, 'bar', dailyData, dailyOptions);
 createChart(mobileCanvas, 'doughnut', mobileData, mobileOptions)
+
+user.addEventListener('input', e =>{
+    let searchArray = [];
+    if (user.value.length === 0) {
+        userResults.style.display = 'none'
+    }
+    else if (e.target.value){
+        searchArray = userToMessage.filter(userName => userName.toLowerCase().includes(e.target.value.toLowerCase()));
+        function toTitleCase (userName){
+            let seperateWord = userName.toLowerCase().split(' ');
+            for(let i = 0; i < seperateWord.length; i++){
+                seperateWord[i] = seperateWord[i].charAt(0).toUpperCase() + seperateWord[i].substring(1);
+            }
+            return seperateWord.join(' ')
+        }
+        searchArray = searchArray.map(userName => `<li>${toTitleCase(userName)}</li>`);
+        userResults.style.display = 'block';
+        userResults.addEventListener ('click', e => {
+            let selectUser = e.target;
+            user.value = selectUser.textContent
+            userResults.style.display = 'none'
+            console.log(selectUser.textContent)
+        })
+    }
+        autocomplete(searchArray)
+
+})
+
+function autocomplete (searchArray) {
+    let html = !searchArray.length ? '' : searchArray.join('');
+    userResults.innerHTML = html;
+}
