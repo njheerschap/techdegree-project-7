@@ -262,3 +262,35 @@ function autocomplete (searchArray) {
     let html = !searchArray.length ? '' : searchArray.join('');
     userResults.innerHTML = html;
 }
+
+// Save Settings with Local Storage
+
+
+let check1 = document.querySelector('#checkbox1');
+let check2 = document.querySelector('#checkbox2');
+let timeZone = document.querySelector('#timezone');
+check1.addEventListener('change', e => {
+    localStorage.setItem('checkbox1State', check1.checked.toString());
+})
+check2.addEventListener('change', e => {
+    localStorage.setItem('checkbox2State', check2.checked.toString());
+})
+timeZone.addEventListener('change', e => {
+    localStorage.setItem('userTimeZone', timezone.value);
+})
+
+document.onreadystatechange = function() {
+    if (document.readyState =='complete') {
+        if (localStorage.getItem('checkbox1State') === 'true') {
+            check1.checked = true;
+        } else {
+            check1.checked = false;
+        }
+        if (localStorage.getItem('checkbox2State') === 'true') {
+            check2.checked = true;
+        } else {
+            check2.checked = false;
+        }
+        timezone.value = localStorage.getItem('userTimeZone')
+    }
+}

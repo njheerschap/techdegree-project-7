@@ -1196,7 +1196,7 @@ canvas {
   border-radius: 5px;
   animation: opacity 0.3s ease-in;
   color: #8674b5;
-  z-index: 1;
+  z-index: 3;
 }
 
 #notifications ul {
@@ -1302,7 +1302,7 @@ a svg {
 .home,
 .charts,
 .users,
-.settings {
+.settings-icon {
   fill: white;
 }
 
@@ -1422,6 +1422,7 @@ a svg {
 
 fieldset {
   border: none;
+  z-index: -1;
 }
 @media (min-width: 1024px) {
   fieldset {

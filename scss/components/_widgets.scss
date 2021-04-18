@@ -106,6 +106,7 @@
 
 fieldset {
     border: none;
+    z-index: -1;
     @include for-lg-screen {
         margin-left: 100px;
     }
