@@ -5,16 +5,25 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-canvas {
-    display: none;
+body {
+    overflow-x: hidden;
 }
 
-.placeholder {
-    display: block;
-    margin: 0 auto;
-    @include for-md-screen{
-        width: 95%;
-        height: auto;
+   
+canvas {
+    display: none;
+    max-height: 45vh;
+}
+
+.main-content {
+    @include for-md-screen {
+        max-width: calc(100vw - 65px);
     }
 }
+
+#daily-chart,
+#mobile-chart {
+    max-height: 25vh;
+}
+
 

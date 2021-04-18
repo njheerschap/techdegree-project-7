@@ -3,7 +3,8 @@
 // ===========================
 
 @import 'utilities/variables',
-        'utilities/mixins';
+        'utilities/mixins',
+        'components/_toggle-switch.scss';
 
 @import 'baseStyles/_normalize.scss',
         'baseStyles/_bodystyles.scss',
@@ -11,5 +12,4 @@
 
 @import 'components/header',
         'components/_nav.scss',
-        'components/_toggle-switch.scss',
         'components/_widgets.scss';

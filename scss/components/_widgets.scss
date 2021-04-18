@@ -1,7 +1,45 @@
 
-/* ======== Widget Containers ======== */
+/* ======== Alert Banner ======== */
 
+.alert {
+    padding: 10px;
+    @include for-md-screen{
+        width: calc(100vw - 85px);
+        padding: 5px 15px;
+    }
+}
+.alert-banner {
+    display: flex;
+    padding: 5px;
+    color: #fff;
+    background-color: $color-primary;
+    border-radius: 5px;
+    @include for-md-screen {
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+.alert-banner-close {
+    flex: 0 0 15%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 5px;
+    @include for-md-screen {
+        flex: 0 0 20%;
+    }
+}
 
+.alert-banner-close:hover {
+    cursor: pointer;
+}
+
+.alert-banner-message {
+    margin-top: 5px;
+    @include for-md-screen {
+        flex: 0 0 80%;
+        text-align: left;
+    }
+}
 
 
 /* ======== Widget Header ======== */
@@ -14,13 +52,13 @@
 .dash-head {
     align-self: center;
     padding-left: 10px;
-    flex-basis: 33%;
+    flex: 0 1 33%;
     font-size: 1rem;
     font-weight: 400;
 }
 
 .main-header-search {
-    flex-basis: 67%;
+    flex: 0 1 67%;
     @include for-lg-screen {
         flex: 1 0 85%;
     }
@@ -66,21 +104,23 @@
     padding: 0 10px
 }
 
-.traffic-chart-head li {
-    display: inline-block;
-    margin: 5px;
-    text-align: center;
-    list-style: none;
-    font-size: .95rem;
+fieldset {
+    border: none;
+    @include for-lg-screen {
+        margin-left: 100px;
+    }
+}
+
+.switch-toggle input + label {
+    padding: 0;
+}
+.switch-toggle.switch-ios, .switch-light.switch-ios > span {
+    background-color: lightgrey;
+    width: 300px;
 }
 
 
 /* Traffic Chart */
-
-.placeholder {
-    display: block;
-    margin: 0 auto;
-}
 
 /* ======== Daily Traffic Widget ======== */
 
@@ -309,6 +349,10 @@ textarea {
 
 /* ======== Settings ======== */
 
+.settings {
+    padding-right: 10px;
+}
+
 .settings h3 {
     margin-left: 10px;
     font-weight: 400;
@@ -380,6 +424,7 @@ select {
 .switch-ios.switch-light > span{
     width: 25vw;
 }
+
 
 .switch-ios.switch-light input:checked ~ span a {
     border-color: $color-primary;
