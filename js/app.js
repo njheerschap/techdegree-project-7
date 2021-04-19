@@ -150,6 +150,8 @@ for (let i = 0; i < userP.length; i++) {
     userToMessage.push (addUser)
 }
 
+// Notification Icon
+
 notifications.innerHTML = `
 <div>
     <ul>
@@ -159,6 +161,7 @@ notifications.innerHTML = `
 </div>
 `
 
+
 alertContainer.addEventListener('click', e => {
     if(notifications.style.display === 'none'){
         notifications.style.display = 'block';
@@ -166,6 +169,8 @@ alertContainer.addEventListener('click', e => {
         notifications.style.display = 'none';
     }
 })
+
+// Alert Banner
 
 alertBanner.innerHTML = `
     <div class="alert-banner">
@@ -181,18 +186,8 @@ alertBanner.addEventListener('click', e => {
     }
 })
 
-send.addEventListener('click', ()=> {
-    if (user.value === '' && message.value === '') {
-        alert('Please fill out user and message fields before sending');
-    } else if (user.value === '') {
-        alert('Please fill out user field before sending')
-    } else if (message.value === '') {
-        alert('Please fill out message field before sending')
-    } else {
-        alert(`Message successfully sent to ${user.value}`)
-    }
-    
-})
+
+// Create Charts
 
 function createTrafficChart(chartElement, chartType, chartData, chartOptions ) {
     let myChart = new Chart(chartElement, {
@@ -230,6 +225,23 @@ function createChart(chartElement, chartType, chartData, chartOptions ) {
 
 createChart(dailyCanvas, 'bar', dailyData, dailyOptions);
 createChart(mobileCanvas, 'doughnut', mobileData, mobileOptions)
+
+// Messaging Widget 
+
+send.addEventListener('click', ()=> {
+    if (user.value === '' && message.value === '') {
+        alert('Please fill out user and message fields before sending');
+    } else if (user.value === '') {
+        alert('Please fill out user field before sending')
+    } else if (message.value === '') {
+        alert('Please fill out message field before sending')
+    } else {
+        alert(`Message successfully sent to ${user.value}`)
+    }
+    
+})
+
+// Messaging Widget Autocomplete
 
 user.addEventListener('input', e =>{
     let searchArray = [];
