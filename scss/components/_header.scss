@@ -63,7 +63,10 @@
     font-size: 1.25rem;
     font-weight: 300;
     @include for-md-screen {
-        flex: 0 0 75%;
+        flex: 0 1 75%;
+    }
+    @include for-lg-screen {
+        flex: 0 1 70%;
     }
 }
 
@@ -111,5 +114,8 @@
     flex: 0 0 30%;
     font-size: .7rem;
     font-weight: 200;
+    @include for-md-screen {
+        flex: 0 0 15%;
+    }
 }
 

@@ -106,6 +106,10 @@
 
 fieldset {
     border: none;
+    padding: 0;
+    @include for-md-screen {
+        padding-right: 15px;
+    }
     @include for-lg-screen {
         margin-left: 200px;
     }

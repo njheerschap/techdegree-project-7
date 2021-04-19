@@ -278,17 +278,21 @@ function autocomplete (searchArray) {
 // Save Settings with Local Storage
 
 
-let check1 = document.querySelector('#checkbox1');
-let check2 = document.querySelector('#checkbox2');
-let timeZone = document.querySelector('#timezone');
-check1.addEventListener('change', e => {
+const check1 = document.querySelector('#checkbox1');
+const check2 = document.querySelector('#checkbox2');
+const timeZone = document.querySelector('#timezone');
+const saveButton = document.querySelector('#save');
+const cancelButton = document.querySelector('#cancel')
+saveButton.addEventListener('click', () => {
     localStorage.setItem('checkbox1State', check1.checked.toString());
-})
-check2.addEventListener('change', e => {
     localStorage.setItem('checkbox2State', check2.checked.toString());
-})
-timeZone.addEventListener('change', e => {
     localStorage.setItem('userTimeZone', timezone.value);
+})
+
+cancelButton.addEventListener('click', () => {
+    localStorage.removeItem('checkbox1State');
+    localStorage.removeItem('checkbox2State');
+    localStorage.removeItem('userTimeZone');
 })
 
 document.onreadystatechange = function() {

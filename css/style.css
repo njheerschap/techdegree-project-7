@@ -1222,7 +1222,12 @@ canvas {
 }
 @media (min-width: 768px) {
   .main-header h1 {
-    flex: 0 0 75%;
+    flex: 0 1 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .main-header h1 {
+    flex: 0 1 70%;
   }
 }
 
@@ -1268,6 +1273,11 @@ canvas {
   flex: 0 0 30%;
   font-size: 0.7rem;
   font-weight: 200;
+}
+@media (min-width: 768px) {
+  .main-header h2 {
+    flex: 0 0 15%;
+  }
 }
 
 .main-nav {
@@ -1422,6 +1432,12 @@ a svg {
 
 fieldset {
   border: none;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  fieldset {
+    padding-right: 15px;
+  }
 }
 @media (min-width: 1024px) {
   fieldset {
