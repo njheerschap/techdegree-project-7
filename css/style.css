@@ -1704,6 +1704,7 @@ textarea {
 }
 
 .switch-light {
+  display: flex;
   margin: 25px 10px;
 }
 @media (min-width: 1024px) {
@@ -1716,14 +1717,20 @@ label span {
   float: right;
 }
 
-.setting-toggle {
-  display: inline-block;
+.settings-toggle {
+  flex: 0 0 75%;
   font-size: 0.8rem;
-  padding: 10px 0;
+  padding: 10px 15px;
+}
+@media (min-width: 1024px) {
+  .settings-toggle {
+    flex: 0 0 50%;
+  }
 }
 
 .toggle-switch {
   width: 30px;
+  justify-content: right;
 }
 
 .toggles {
