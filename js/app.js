@@ -163,7 +163,7 @@ notifications.innerHTML = `
 
 
 alertContainer.addEventListener('click', e => {
-    if(notifications.style.display === 'none'){
+    if(notifications.style.display === 'none' || notifications.style.display === ''){
         notifications.style.display = 'block';
     } else {
         notifications.style.display = 'none';
