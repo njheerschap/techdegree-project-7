@@ -1156,7 +1156,7 @@ canvas {
 }
 
 .main-header {
-  max-width: 100vw;
+  max-width: vw;
   height: 75px;
   display: flex;
   background-color: #8674b5;
